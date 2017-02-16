@@ -14,7 +14,7 @@ services:
       - /var/run/calico:/var/run/calico:rw
       - /var/log/calico:/var/log/calico:rw
     environment:
-      - ETCD_ENDPOINTS=http://calico-etcd:2379
+      - ETCD_ENDPOINTS=http://calico-etcd.calico.rancher.internal:2379
   cni-driver:
     privileged: true
     image: calico/cni:v1.5.6

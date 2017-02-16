@@ -13,6 +13,6 @@ calico:
         name: rancher-calico-network
         type: calico
         log_level: info
-        etcd_endpoints: http://calico-etcd:2379
+        etcd_endpoints: http://calico-etcd.calico.rancher.internal:2379
         ipam:
           type: calico-ipam
