@@ -7,6 +7,7 @@ calico:
     name: Calico
     default_network:
       name: calico
+      host_ports: false
     cni_config:
       '10-rancher-calico.conf':
         name: rancher-calico-network
