@@ -1,6 +1,6 @@
 .catalog:
   name: "Calico"
-  version: "v0.23.0"    # Keep this in sync with calico/node tag version
+  version: "v1.0.2"    # Keep this in sync with calico/node tag version
 
 calico:
   network_driver:

@@ -3,7 +3,7 @@ services:
   calico:
     cap_add:
       - NET_ADMIN
-    image: calico/node:v0.23.0
+    image: calico/node:v1.0.2
     network_mode: host
     depends_on:
       - calico-etcd
@@ -18,7 +18,7 @@ services:
       - ETCD_ENDPOINTS=http://calico-etcd:2379
   cni-driver:
     privileged: true
-    image: calico/cni:v1.4.3
+    image: calico/cni:v1.5.6
     command: sh
     tty: true
     network_mode: host
