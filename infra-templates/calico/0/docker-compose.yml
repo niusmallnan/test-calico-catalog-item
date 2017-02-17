@@ -15,6 +15,7 @@ services:
       - /var/log/calico:/var/log/calico:rw
     environment:
       - ETCD_ENDPOINTS=http://calico-etcd.calico.rancher.internal:2379
+      - IP_AUTODETECT_METHOD=can-reach=www.google.com
   cni-driver:
     privileged: true
     image: calico/cni:v1.5.6
