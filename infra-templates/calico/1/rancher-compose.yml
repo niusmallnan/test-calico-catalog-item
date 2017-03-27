@@ -18,11 +18,11 @@
       label: "Enable Debug Logs"
       description: "This will enable very verbose debug logs."
       type: "enum"
-      default: "debug"
+      default: "DEBUG"
       required: true
       options:
-        - "debug"
-        - "info"
+        - "DEBUG"
+        - "INFO"
 
 calico:
   network_driver:
