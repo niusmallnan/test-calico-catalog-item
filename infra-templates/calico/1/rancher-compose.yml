@@ -12,7 +12,7 @@
       label: "Etcd image"
       description: "Etcd docker image"
       type: "string"
-      default: 'registry.cn-hangzhou.aliyuncs.com/rancher-cn/coreos-etcd:v3.0.14'
+      default: 'registry.cn-hangzhou.aliyuncs.com/rancher-cn/coreos-etcd'
       required: true
 
 calico:
