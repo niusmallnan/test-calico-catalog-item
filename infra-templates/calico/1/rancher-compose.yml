@@ -14,6 +14,15 @@
       type: "string"
       default: 'registry.cn-hangzhou.aliyuncs.com/rancher-cn/coreos-etcd'
       required: true
+    - variable: "LOG_LEVEL"
+      label: "Enable Debug Logs"
+      description: "This will enable very verbose debug logs."
+      type: "enum"
+      default: "debug"
+      required: true
+      options:
+        - "debug"
+        - "info"
 
 calico:
   network_driver:
@@ -25,7 +34,7 @@ calico:
       '10-rancher-calico.conf':
         name: rancher-calico-network
         type: calico
-        log_level: info
+        log_level: ${LOG_LEVEL}
         etcd_endpoints: http://calico-etcd.calico.rancher.internal:2379
         ipam:
           type: calico-ipam
