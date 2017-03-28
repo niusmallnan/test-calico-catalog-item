@@ -14,12 +14,6 @@
       type: "string"
       default: 'registry.cn-hangzhou.aliyuncs.com/rancher-cn/coreos-etcd'
       required: true
-    - variable: "CALICO_IPV4POOL_CIDR"
-      label: "The IPv4 Pool"
-      description: "The IPv4 Pool"
-      type: "string"
-      default: '192.168.0.0/16'
-      required: true
     - variable: "LOG_LEVEL"
       label: "Enable Debug Logs"
       description: "This will enable very verbose debug logs."
