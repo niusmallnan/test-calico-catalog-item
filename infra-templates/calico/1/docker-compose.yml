@@ -16,6 +16,7 @@ services:
     environment:
       ETCD_ENDPOINTS: 'http://calico-etcd.calico.rancher.internal:2379'
       IP_AUTODETECT_METHOD: 'can-reach=${AUTODETECT_CAN_REACH}'
+      CALICO_IPV4POOL_CIDR: '${CALICO_IPV4POOL_CIDR}'
   cni-driver:
     privileged: true
     image: calico/cni:v1.5.6
@@ -35,6 +36,8 @@ services:
       ETCD_ENDPOINTS: 'http://calico-etcd.calico.rancher.internal:2379'
     stdin_open: true
     tty: true
+    volumes:
+      - /var/run/calico:/var/run/calico:ro
     labels:
       io.rancher.container.pull_image: always
       io.rancher.container.dns: 'true'
