@@ -26,7 +26,7 @@
 
 calico:
   network_driver:
-    name: Calico
+    name: Rancher Calico
     default_network:
       name: calico
       host_ports: true

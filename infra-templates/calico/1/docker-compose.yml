@@ -39,7 +39,6 @@ services:
     volumes:
       - /var/run/calico:/var/run/calico:ro
     labels:
-      io.rancher.container.pull_image: always
       io.rancher.container.dns: 'true'
   calico-etcd:
     image: ${ETCD_IMAGE}:v3.0.14
