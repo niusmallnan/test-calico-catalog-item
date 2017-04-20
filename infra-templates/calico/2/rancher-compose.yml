@@ -1,0 +1,40 @@
+.catalog:
+  name: "Calico"
+  version: "v1.1.0"    # Keep this in sync with calico/node tag version
+  questions:
+    - variable: "AUTODETECT_CAN_REACH"
+      label: "IP autodetect can reach"
+      description: "The can-reach method uses your local routing to determine which IP address will be used to reach the supplied destination."
+      type: "string"
+      default: 'www.baidu.com'
+      required: true
+    - variable: "ETCD_IMAGE"
+      label: "Etcd image"
+      description: "Etcd docker image"
+      type: "string"
+      default: 'registry.cn-hangzhou.aliyuncs.com/rancher-cn/coreos-etcd'
+      required: true
+    - variable: "LOG_LEVEL"
+      label: "Enable Debug Logs"
+      description: "This will enable very verbose debug logs."
+      type: "enum"
+      default: "DEBUG"
+      required: true
+      options:
+        - "DEBUG"
+        - "INFO"
+
+calico:
+  network_driver:
+    name: Rancher Calico
+    default_network:
+      name: calico
+      host_ports: true
+    cni_config:
+      '10-rancher-calico.conf':
+        name: rancher-calico-network
+        type: calico
+        log_level: ${LOG_LEVEL}
+        etcd_endpoints: http://calico-etcd.calico.rancher.internal:2379
+        ipam:
+          type: calico-ipam
