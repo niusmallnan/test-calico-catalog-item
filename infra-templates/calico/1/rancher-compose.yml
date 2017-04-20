@@ -1,6 +1,6 @@
 .catalog:
   name: "Calico"
-  version: "v1.0.2-test"    # Keep this in sync with calico/node tag version
+  version: "v1.0.2-1"    # Keep this in sync with calico/node tag version
   questions:
     - variable: "AUTODETECT_CAN_REACH"
       label: "IP autodetect can reach"
