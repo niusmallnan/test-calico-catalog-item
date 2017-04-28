@@ -34,14 +34,13 @@ services:
       - /usr/bin/entry.sh
     environment:
       ETCD_ENDPOINTS: 'http://calico-etcd.calico.rancher.internal:2379'
+      SUBNET: ${SUBNET}
     stdin_open: true
     tty: true
     volumes:
       - /var/run/calico:/var/run/calico:ro
     labels:
       io.rancher.container.dns: 'true'
-    environment:
-      SUBNET: ${SUBNET}
   calico-etcd:
     image: ${ETCD_IMAGE}
     network_mode: host
