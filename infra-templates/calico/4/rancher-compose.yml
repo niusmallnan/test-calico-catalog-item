@@ -12,7 +12,7 @@
       label: "Etcd image"
       description: "Etcd docker image"
       type: "string"
-      default: 'registry.cn-hangzhou.aliyuncs.com/rancher-cn/coreos-etcd:v3.0.14'
+      default: 'niusmallnan/coreos-etcd:v3.0.14'
       required: true
     - variable: "LOG_LEVEL"
       label: "Enable Debug Logs"
