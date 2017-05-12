@@ -6,13 +6,7 @@
       label: "IP autodetect can reach"
       description: "The can-reach method uses your local routing to determine which IP address will be used to reach the supplied destination."
       type: "string"
-      default: 'www.baidu.com'
-      required: true
-    - variable: "ETCD_IMAGE"
-      label: "Etcd image"
-      description: "Etcd docker image"
-      type: "string"
-      default: 'niusmallnan/coreos-etcd:v3.0.14'
+      default: '8.8.8.8'
       required: true
     - variable: "LOG_LEVEL"
       label: "Enable Debug Logs"

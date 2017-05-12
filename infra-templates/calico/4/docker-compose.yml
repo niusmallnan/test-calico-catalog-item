@@ -42,7 +42,7 @@ services:
     labels:
       io.rancher.container.dns: 'true'
   calico-etcd:
-    image: ${ETCD_IMAGE}
+    image: niusmallnan/coreos-etcd:v3.0.14
     network_mode: host
     labels:
       io.rancher.container.dns: 'true'
