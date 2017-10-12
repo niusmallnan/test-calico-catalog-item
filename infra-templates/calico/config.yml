@@ -7,3 +7,4 @@ projectURL: https://www.projectcalico.org/
 license: Apache License, Version 2.0
 labels:
   io.rancher.certified: rancher
+  io.rancher.orchestration.supported: 'cattle,kubernetes'
